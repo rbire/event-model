@@ -3,7 +3,7 @@
 
 ## Submitted to RESO by the Real Estate Blockchain Initiative
 
-### Version 1.0 - December 2018
+### Version 1.1 - December 2018
 
 ---
 
