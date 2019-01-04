@@ -1,9 +1,10 @@
 
 # Distributed Ledger Event Model
 
-## Submitted to RESO by the Real Estate Blockchain Initiative
+## Request for Comment 
 
-### Version 1.1 - December 2018
+#### Submitted to RESO by the Real Estate Blockchain Initiative
+#### Version 1.1 - December 2018
 
 ---
 
