@@ -17,15 +17,15 @@ Ten fields are used to record (capture) an Event:
 Field | Responsibility | Scope | Description
 :--- | :--- | :--- | :---
 TransactionId | System Assigned | Unique within the ledger | A unique identifier created for each recording in an immutable ledger
-EventTarget | Application Supplied | Opaque to the ledger | Uniquely identifying source of the event. e.g. Unique Property Identifier, Unique Agent Identifier, Unique Organization Identifier, etc.
+EventSubject | Application Supplied | Opaque to the ledger | Uniquely identifies the object of the event. e.g. Unique Property Identifier, Unique Agent Identifier, Unique Organization Identifier, etc.
 System | Lookup | [System value](#system-lookup) | Classification of the business system generating the event
-Resource | Lookup | [Resource value](#resource-lookup) | Classification of the object the event is being applied to; the noun
+SubjectType | Lookup | [Resource value](#resource-lookup) | Classification of the object the event is being applied to; the noun.  Related to the EventSubject.
 Entity | Lookup | [Entity value](#entity-lookup) | Classification of the what generated the event; the actor
 Event | Lookup | [Event value](#event-lookup) | Describes a document, occurrence , or incident.  Typically has associated documentation
 State | Lookup | [State value](#state-lookup) | A verb identifying the occurrence being recorded.  Typically expressed in terms of the Event argument
 Timestamp | System Assigned | UTC timestamp | The underlying distributed ledger assigns this field.
 Version | System Assigned | Version of this standard | The underlying distributed ledger assigns this field
-Application | Application Supplied | Vendor specific | Identifies the application or system used to record the event.
+Application | Application Supplied | Vendor specific | Identifies the application or system used to record the event; the system of record.
 
 There is a section of this document that describes each of the Lookup types (System, Resource, etc.).
 
@@ -47,7 +47,7 @@ There is a section of this document that describes each of the Lookup types (Sys
 
 Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
 
-TransactionId | EventTarget | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | Timestamp | Application
+TransactionId | EventSubject | [System](#system-lookup) | [SubjectType](#subjectType-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | Timestamp | Application
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
 4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Recorded | Sun, 03 Jun 2018 13:04:05 GMT | 87478-a43
 c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Changed | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
@@ -59,7 +59,7 @@ e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Transaction Manageme
 
 Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
 
-TransactionId | EventTarget | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | Timestamp | Application
+TransactionId | EventSubject | [System](#system-lookup) | [SubjectType](#subjectType-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | Timestamp | Application
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
 4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 14 Jun 2017 13:04:05 GMT | 87478-a43
 c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Mortgage Industry Service | Loan | Builder | Estimate | Received | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
@@ -70,13 +70,16 @@ e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Property Recording S
 
 #### Notes
 
-1. All of the records use the EventSourceIdentity field to represent the same property; RESO UPI (US040130050822009A).
+1. All of the records use the EventSubject field to represent the same property; RESO UPI (US040130050822009A).
 
 ---
 
 ### System Lookup
 
-The System Lookup classifies the system generating the record.  
+The System Lookup classifies the system generating the record.  It is related
+to the Application field which identifies the software creating the record. It 
+is also related to the [Entity](#entity-lookup) lookup which identifies what 
+kind of user is creating the record.  
 
 #### System Values
 
@@ -96,10 +99,10 @@ The System Lookup classifies the system generating the record.
 
 ---
 
-### Resource Lookup
+### SubjectType Lookup
 
-The Resource Lookup classifies what is being modified by the record.  What is in
-the EventTarget Field
+The SubjectType Lookup classifies what is being modified by the record.  What 
+is in the EventSubject Field.
 
 #### Allowed Values
 
@@ -119,8 +122,8 @@ the EventTarget Field
 
 ### Entity Lookup
 
-The Entity Lookup classifies who is making the modification.  Claasification
-of the recorder.
+The Entity Lookup is the claasification of iwhat kind of person is acting as a 
+recorder.  The person records events using a [System](#system-lookup).
 
 #### Allowed Values
 
@@ -175,7 +178,8 @@ associated with the record.
 
 ### State Lookup
 
-The State Lookup classifies what specifically is being recorded about the Event.
+The State Lookup classifies what specifically is being recorded about the 
+[Event](#event-lookup).
 
 #### Allowed Values
 
