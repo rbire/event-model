@@ -18,11 +18,11 @@ Field | Responsibility | Scope | Description
 :--- | :--- | :--- | :---
 TransactionId | System Assigned | Unique within the ledger | A unique identifier created for each recording in an immutable ledger
 EventSubject | Application Supplied | Opaque to the ledger | Uniquely identifies the object of the event. e.g. Unique Property Identifier, Unique Agent Identifier, Unique Organization Identifier, etc.
-System | Lookup | [System value](#system-lookup) | Classification of the business system generating the event
+System | Lookup | [System value](#system-lookup) | Classification of the business system generating the event. The type of user is handled by the [Entity](#entity-lookup) lookup.
 SubjectType | Lookup | [Resource value](#resource-lookup) | Classification of the object the event is being applied to; the noun.  Related to the EventSubject.
-Entity | Lookup | [Entity value](#entity-lookup) | Classification of the what generated the event; the actor
-Event | Lookup | [Event value](#event-lookup) | Describes a document, occurrence , or incident.  Typically has associated documentation
-State | Lookup | [State value](#state-lookup) | A verb identifying the occurrence being recorded.  Typically expressed in terms of the Event argument
+Entity | Lookup | [Entity value](#entity-lookup) | Classification of the what generated the event; the actor.   A person uses a [System](#system-lookup) to record events.
+Event | Lookup | [Event value](#event-lookup) | Describes a document, occurrence , or incident.  Typically has associated documentation. Further classified by [State](#state-lookup).
+State | Lookup | [State value](#state-lookup) | A verb identifying the occurrence being recorded.  Expressed in terms of the [Event](#event-lookup) argument.
 Timestamp | System Assigned | UTC timestamp | The underlying distributed ledger assigns this field.
 Version | System Assigned | Version of this standard | The underlying distributed ledger assigns this field
 Application | Application Supplied | Vendor specific | Identifies the application or system used to record the event; the system of record.
@@ -148,7 +148,7 @@ recorder.  The person records events using a [System](#system-lookup).
 ### Event Lookup
 
 The Event Lookup classifies a document or documented occurrence that is 
-associated with the record.  Further classified with the [State](#state-lookup).  
+associated with the record.  Further classified by [State](#state-lookup).  
 
 #### Allowed Values
 
