@@ -40,6 +40,39 @@ There is a section of this document that describes each of the Lookup types (Sys
 
 ---
 
+### Examples
+
+#### Simple history of a home being sold
+
+Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
+
+TransactionId | EventSourceIdentity | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [Action](#action-lookup) | Timestamp | Application
+:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
+4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Recorded | Sun, 03 Jun 2018 13:04:05 GMT | 87478-a43
+c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Changed | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
+cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Marketing Service | Property | Agent | Openhouse | Published | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
+2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Property Listing Service | Property | Broker | Offer | Received | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
+e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Transaction Management Service | Property | Broker | Contract | Signed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
+
+#### Simple construction project
+
+Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
+
+TransactionId | EventSourceIdentity | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [Action](#action-lookup) | Timestamp | Application
+:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
+4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 14 Jun 2017 13:04:05 GMT | 87478-a43
+c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Mortgage Industry Service | Loan | Builder | Estimate | Received | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
+cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Recording System | Loan | Builder | Lien  | Placed | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
+2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Manual Input | Loan | Builder | Construction | Completed | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
+e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Property Recording System | Loan | Builder | Lien | Removed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
+7646aaef-ec2a-4e79-b5a6-e2e39827d0a5 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 13 Dec 2018 14:08:23 GMT | 87478-a43
+
+#### Notes
+
+1. All of the records use the EventSourceIdentity field to represent the same property; RESO UPI (US040130050822009A).
+
+---
+
 ### System Lookup
 
 The System Lookup classifies the system generating the record.  
@@ -162,35 +195,3 @@ The Action Lookup classifies a what specifically is being recorded about the Eve
 
 ---
 
-### Examples
-
-#### Simple history of a home being sold
-
-Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
-
-TransactionId | EventSourceIdentity | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [Action](#action-lookup) | Timestamp | Application
-:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Recorded | Sun, 03 Jun 2018 13:04:05 GMT | 87478-a43
-c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Changed | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
-cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Marketing Service | Property | Agent | Openhouse | Published | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
-2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Property Listing Service | Property | Broker | Offer | Received | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
-e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Transaction Management Service | Property | Broker | Contract | Signed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
-
-#### Simple construction project
-
-Each record represents an event.  The records have been sorted by the Timestamp to provide a view of the sequencing behind the history.  
-
-TransactionId | EventSourceIdentity | [System](#system-lookup) | [Resource](#resource-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [Action](#action-lookup) | Timestamp | Application
-:--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 14 Jun 2017 13:04:05 GMT | 87478-a43
-c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Mortgage Industry Service | Loan | Builder | Estimate | Received | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
-cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Recording System | Loan | Builder | Lien  | Placed | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
-2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Manual Input | Loan | Builder | Construction | Completed | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
-e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Property Recording System | Loan | Builder | Lien | Removed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
-7646aaef-ec2a-4e79-b5a6-e2e39827d0a5 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 13 Dec 2018 14:08:23 GMT | 87478-a43
-
-#### Notes
-
-1. All of the records use the EventSourceIdentity field to represent the same property; RESO UPI (US040130050822009A).
-
----
