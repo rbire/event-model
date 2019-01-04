@@ -148,7 +148,7 @@ recorder.  The person records events using a [System](#system-lookup).
 ### Event Lookup
 
 The Event Lookup classifies a document or documented occurrence that is 
-associated with the record.
+associated with the record.  Further classified with the [State](#state-lookup).  
 
 #### Allowed Values
 
