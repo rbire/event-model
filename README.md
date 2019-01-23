@@ -79,7 +79,7 @@ representation.  The set of lookups can change between versions of the standard.
 This section presents normative examples of the event model.  These are simple
 examples intended to demonstrate the model.  All of the records use the
 [EventSubject](#eventsubject) field to represent the same property; RESO UPI
-(US040130050822009A).
+(US-42049-49888-1213666-R-N).
 
 
 ### History of a home being sold
@@ -90,11 +90,11 @@ history.
 
 [TransactionId](#transactionid) | [EventSubject](#eventsubject) | [System](#system-lookup) | [SubjectType](#subjectType-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | [Timestamp](#timestamp) |[Application](#application) 
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Recorded | Sun, 03 Jun 2018 13:04:05 GMT | 87478-a43
-c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Property Listing Service | Property | Broker | Listing | Changed | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
-cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Marketing Service | Property | Agent | Openhouse | Published | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
-2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Property Listing Service | Property | Broker | Offer | Received | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
-e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Transaction Management Service | Property | Broker | Contract | Signed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
+4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US-42049-49888-1213666-R-N | Property Listing Service | Property | Broker | Listing | Recorded | Sun, 03 Jun 2018 13:04:05 GMT | 87478-a43
+c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US-42049-49888-1213666-R-N | Property Listing Service | Property | Broker | Listing | Changed | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
+cd7a53f-d3b4-4e48-845b-604bbe507805 | US-42049-49888-1213666-R-N | Property Marketing Service | Property | Agent | Openhouse | Published | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
+2ad753f4-d3b4-4e47-8402-604bbe7886434 | US-42049-49888-1213666-R-N | Property Listing Service | Property | Broker | Offer | Received | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
+e27a353f-d3b4-32e8-8629-604bbe237802 | US-42049-49888-1213666-R-N | Transaction Management Service | Property | Broker | Contract | Signed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
 
 ### Construction project
 
@@ -104,12 +104,12 @@ history.
 
 [TransactionId](#transactionid) | [EventSubject](#eventsubject) | [System](#system-lookup) | [SubjectType](#subjectType-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | [Timestamp](#timestamp) |[Application](#application) 
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
-4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 14 Jun 2017 13:04:05 GMT | 87478-a43
-c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US040130050822009A | Mortgage Industry Service | Loan | Builder | Estimate | Received | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
-cd7a53f-d3b4-4e48-845b-604bbe507805 | US040130050822009A | Property Recording System | Loan | Builder | Lien  | Placed | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
-2ad753f4-d3b4-4e47-8402-604bbe7886434 | US040130050822009A | Manual Input | Loan | Builder | Construction | Completed | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
-e27a353f-d3b4-32e8-8629-604bbe237802 | US040130050822009A | Property Recording System | Loan | Builder | Lien | Removed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
-7646aaef-ec2a-4e79-b5a6-e2e39827d0a5 | US040130050822009A | Tax Assessment System | Tax | County | Assessment | Received | Thu, 13 Dec 2018 14:08:23 GMT | 87478-a43
+4b46aadd-0f2a-4e79-b3a6-e2e45927d2a2 | US-42049-49888-1213666-R-N | Tax Assessment System | Tax | County | Assessment | Received | Thu, 14 Jun 2017 13:04:05 GMT | 87478-a43
+c7e5a353f-d3b4-2f48-8f02-604bbe507805 | US-42049-49888-1213666-R-N | Mortgage Industry Service | Loan | Builder | Estimate | Received | Sat, 21 Jul 2018 18:34:22 GMT | 87478-a43
+cd7a53f-d3b4-4e48-845b-604bbe507805 | US-42049-49888-1213666-R-N | Property Recording System | Loan | Builder | Lien  | Placed | Sun, 19 Aug 2018 12:01:45 GMT | 15435-dd6
+2ad753f4-d3b4-4e47-8402-604bbe7886434 | US-42049-49888-1213666-R-N | Manual Input | Loan | Builder | Construction | Completed | Tue, 28 Aug 2018 18:11:22 GMT | 87478-a43
+e27a353f-d3b4-32e8-8629-604bbe237802 | US-42049-49888-1213666-R-N | Property Recording System | Loan | Builder | Lien | Removed | Wed, 03 Oct 2018 12:011:48 GMT | 438-f32
+7646aaef-ec2a-4e79-b5a6-e2e39827d0a5 | US-42049-49888-1213666-R-N | Tax Assessment System | Tax | County | Assessment | Received | Thu, 13 Dec 2018 14:08:23 GMT | 87478-a43
 
 ---
 
