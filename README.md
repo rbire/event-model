@@ -4,7 +4,7 @@
 ## Request for Comment 
 
 #### Submitted to RESO Distributed Ledger Worgroup by the Real Estate Blockchain Initiative
-#### Version 1.1 - December 2018
+#### Version 1.2 - March 2019
 
 ---
 
