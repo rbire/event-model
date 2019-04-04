@@ -3,7 +3,7 @@
 
 ## Request for Comment 
 
-#### Submitted to RESO Distributed Ledger Worgroup by the Real Estate Blockchain Initiative
+#### Submitted to RESO Distributed Ledger Workgroup by the Real Estate Blockchain Initiative
 #### Version 1.3 - April 2019
 
 ---
@@ -33,7 +33,7 @@
 
 ## Overview  
 
-An event is a record of occurrence that relects the state of a document,
+An event is a record of occurrence that reflects the state of a document,
 process, system,  or object as of a point in time.  Events expressed with a
 standard approach are easier to store and pass between systems.  The RESO
 Distributed Ledger Event Model represents a standard approach that can be used
@@ -152,7 +152,7 @@ history.
 In this example, the same entity (cf67de) records events through both a
 Tax Assessment System and Property Recording System.  Different recorders have
 provided events using a Mortgage Industry Service (975fb) and through Manual
-Inout (a4b762). 
+Input (a4b762). 
 
 [TransactionId](#transactionid) | [EventSubject](#eventsubject) | [System](#system-lookup) | [SubjectType](#subjectType-lookup) | [Entity](#entity-lookup) | [Event](#event-lookup) | [State](#state-lookup) | [Recorder](#recorder) | [Timestamp](#timestamp) | [Application](#application) 
 :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- 
@@ -172,11 +172,11 @@ presented the options for these fields as drop-downs. Lookup values are not
 codified, therefore the entire text value is used in the record.
 
 Values in addition those presented are not valid.  In order to add values to
-lookup fields, the specification should bbe revised with a new version.
+lookup fields, the specification should be revised with a new version.
 
 ### Entity Lookup
 
-The Entity Lookup is the clasification of what kind of person is acting as a 
+The Entity Lookup is the classification of what kind of person is acting as a 
 recorder.  The person records events using a [System](#system-lookup).
 
 #### Entity Values
@@ -298,10 +298,10 @@ as the Universal Agent Identifier and Universal Organization Identifier.
 Recorder is an identifier of the entity that created the event.  It can be an
 individual or company.  An Registry of Recorders can be used to identify the 
 recorder.  Applications can use the registry, along with information from the
-event to find more information anbout the record.  
+event to find more information about the record.  
 
 If the Recorder field value is not present in the Registry of Recorders, then
-there is no eneity that will stnd behind the authenticity of the event.  
+there is no entity that will stand behind the authenticity of the event.  
 
 ### Timestamp 
 
@@ -311,15 +311,15 @@ UTC time.
 ### TransactionId 
 
 A unique identifier created by the ledger for each recording.  The value should
-be independent of the distribbuted ledger.
+be independent of the distributed ledger.
 
 ### Version 
 
-Version represent which verson of the standard is be used for the event.  The
+Version represent which version of the standard is be used for the event.  The
 set of lookups can change between versions of the standard and applications are
 responsible for reconciling records with different versions.
 
-Additional lookup values (to the values presented in this docuemnt)  are not
+Additional lookup values (to the values presented in this document)  are not
 valid.  Add additional values to lookup fields requires a revision of the
 specification.
 
