@@ -296,7 +296,7 @@ as the Universal Agent Identifier and Universal Organization Identifier.
 ### Recorder 
 
 Recorder is an identifier of the entity that created the event.  It can be an
-individual or company.  An Registry of Recorders can be used to identify the 
+individual or company.  A Registry of Recorders can be used to identify the 
 recorder.  Applications can use the registry, along with information from the
 event to find more information about the record.  
 
